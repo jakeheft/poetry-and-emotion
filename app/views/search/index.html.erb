@@ -8,8 +8,12 @@
 		<div class='tone'>
 			<p>Tone(s):</p>
 			<ul>
-				<% poem.tones.each do |tone| %>
-					<li><%= tone %></li>
+				<% if poem.tones != [] %>
+					<% poem.tones.each do |tone| %>
+						<li><%= tone %></li>
+					<% end %>
+				<% else %>
+					<p>Hmmm... apparently I'm not smart enough to detect the tone of this poem</p>
 				<% end %>
 			</ul>
 		</div>
