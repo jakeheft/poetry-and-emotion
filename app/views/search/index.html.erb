@@ -1,0 +1,17 @@
+<h1>Poems</h1>
+
+<% @poems.each do |poem| %>
+	<div class='poem'>
+		<p class='title'>Title: <%= poem.title %></p>
+		<p class='author'>Author: <%= poem.author %></p>
+		<p class='poem'>Poem: <%= poem.poem_text %></p>
+		<div class='tone'>
+			<p>Tone(s):</p>
+			<ul>
+				<% poem.tones.each do |tone| %>
+					<li><%= tone %></li>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+<% end %>
